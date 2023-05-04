@@ -1,0 +1,14 @@
+.button-basic  {
+    font-size: 16px;
+    color: $bodybackground;
+    background:$buttoncolor ;
+    border: none;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: $font-family;
+  }
+  .button-basic:hover {
+    color: $bodybackground;
+    background:$buttonhovercolor;
+  }

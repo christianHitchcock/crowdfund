@@ -1,0 +1,692 @@
+@import "variables";
+@import "button";
+@import "selectors";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,body{  
+    font-family: $font-family;
+    background: $bodybackground;
+    height: 90vh;
+}
+
+    
+header {
+            background-image: url(../images/image-hero-mobile.jpg);
+            height: 45vh;
+            margin:auto;
+            background-repeat: no-repeat;
+            background-size: cover ;
+
+            nav{
+                background:transparent;  
+            ul {
+                list-style: none;
+                display: flex;
+                padding: 0;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                -webkit-animation: slide-in-top 0.7s both;
+                animation: slide-in-top 0.7s both;
+            }
+            li {
+                    padding: 15px 0;
+                    cursor: pointer;
+
+                    transition: all 0.2s linear;
+                    a{
+                        color: $primarycolor;
+                        font-size: $fontsize;
+                        text-decoration: none;
+                        transition: .4s;
+                        padding: 10px;
+                      }
+                    a:hover {
+                        text-decoration: underline;
+                      }
+                    
+                    
+                }
+               li:nth-child(2){
+                    border: 1px solid $bordercolor; 
+                }
+            .items {
+                display: none; 
+                flex-direction:column ;
+                position: absolute;
+                width: 80%;
+                top: 90px;
+                padding: 10px 0;
+                text-align: left;
+                background-color: $backgroundcolor;
+                border-radius: 10px;
+                -webkit-animation: slide-in-top 0.7s both;
+                animation: slide-in-top 0.7s both;
+            }
+          
+            .logo  {
+                    flex: 1;
+                    cursor: default;
+                    user-select: none;
+                    padding: 15px;
+                  }  
+                  
+            .menu-icons {
+                padding: 5px 15px;
+            }
+           #closemenu {
+                display: none;
+           }
+           .responsive {
+            display: flex;
+        }
+        }
+        
+      
+    
+}
+    main{
+      
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        margin: auto;
+        .container-contents {
+            text-align: center;
+            margin-top: -60px;
+            margin-bottom: 20px;
+            background-color: $bodybackground;
+            box-shadow: $boxshadow;
+            border-radius: 10px;
+            padding-bottom: 5px;
+        }
+        #logo {
+            margin-top: -20px;
+        }
+        h3 {
+            padding: 15px 25px;
+            font-size: 20px;
+            font-weight: $boldfontweight;
+        }
+        p{
+          @extend .paragraph;  
+            padding: 15px;
+        }
+        .bookmark {
+            display:flex;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            img {
+                width: 40px;
+                height: 40px;
+            }
+            a{
+                display: none;
+            }
+        }
+
+        button {
+            @extend .button-basic;
+            border-radius: 25px;
+            padding: 10px 35px; 
+            margin:0 5px;
+        }
+
+        .secondcontainer-contents {
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                background-color: $bodybackground;
+                border-radius: 10px;
+                box-shadow: $boxshadow;
+            
+            h1 {
+                font-weight: $boldfontweight;
+                padding: 10px;
+            }
+            hr {
+                width: 80px;
+                margin:10px auto;
+               
+            }
+            progress {
+                border-radius: 7px; 
+                width: 80%;
+                height: 12px;
+                margin-top:10px;
+                margin-bottom: 40px;
+                margin-left: auto;
+                margin-right: auto;
+              }
+              progress::-webkit-progress-bar {
+                background-color: $bordercolor;
+                border-radius: 7px;
+              }
+              progress::-webkit-progress-value {
+                background-color: $buttoncolor;
+                border-radius: 7px;
+              }
+    
+        }
+        .thirdContainer-contents {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            padding-bottom: 10px;
+            background-color: $bodybackground;
+            border-radius: 10px;
+            box-shadow: $boxshadow;
+            text-align: left;
+        
+        h4 {
+           @extend .h4;
+           font-size: 16px;
+           margin-left: 15px
+        }
+        p {
+           @extend .paragraph;
+           padding-top: 10px; 
+           padding-left: 12px;   
+           padding-right: 12px;
+           margin-right: 0px;
+        }
+        .sub-contents {
+            @extend .sub-contents;
+            h6 {
+                @extend .h6;
+            }
+            span {
+                @extend .span;
+            }
+            .number {
+             @extend .number;
+            }
+            button{
+                @extend .button-basic;
+                padding: 10px 20px;
+                font-size: $fontsize;
+                margin-left: 10px;
+                margin-bottom: 20px;
+            }
+        }
+
+        #lastcontent {
+            opacity: 0.5;
+        }
+
+        #outofstock {
+            background-color: $secondarycolor;
+        }
+    }
+}
+
+section {
+    display: none;
+.selection-modal {
+    top: 110%;
+    @extend .modal;
+    .modal-head {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        h4 {
+            @extend .h4;
+            margin-right: 0px;
+            padding-top:40px;
+        }
+        img {
+            height: 15px;
+            width: 15px;
+            margin-top: 20px;
+            margin-left: 110px;
+        }
+        .fa-solid {
+            color: $secondarycolor;
+            font-size: 20px;
+            padding:20px;
+            cursor: pointer;
+        }
+        .fa-solid:hover {
+            color: $primarycolor
+        }
+    }
+    p {
+        @extend .paragraph;
+        padding: 10px 20px;
+    }
+    #lastsubcontent {
+        opacity: 0.5;
+        user-select: none;
+    }
+    .modal-contents {
+        @extend .sub-contents;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin-bottom: 20px;
+      
+    .selected {
+        border:1px solid $buttoncolor ;
+    }
+    .modal-check {
+        display: flex;
+        flex-direction: column;
+        h6 {
+            @extend .h6;
+            padding-top:15px ;
+            padding-left: 40px;
+            padding-bottom: 10px;
+        }
+        // checkbox container //
+        .container {
+            display: block;
+            position: relative;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+          }
+          
+          
+          /* Hide the browser's default radio button */
+          .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+          }
+          
+          /* Create a custom radio button */
+          .checkmark {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            height: 20px;
+            width: 20px;
+            background-color: $bodybackground;
+            border-radius: 50%;
+            border: 1px solid $secondarycolor;
+          }
+          
+          
+          
+         
+          
+          /* Create the indicator (the dot/circle - hidden when not checked) */
+          .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+          }
+          
+          /* Show the indicator (dot/circle) when checked */
+          .container input:checked ~ .checkmark:after {
+            display: block;
+          }
+          
+          /* Style the indicator (dot/circle) */
+          .container .checkmark:after {
+               top: 5px;
+              left: 4px;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              background: $buttoncolor;
+          }
+          p {
+            @extend .paragraph;
+          }
+    }
+   
+    .span {
+        @extend .span;
+        padding-left: 40px;
+      }
+      .pledge {
+        display: none;
+        flex-direction: column;
+        margin-top:20px;
+        h4 {
+            @extend .paragraph;
+        text-align: center;
+        border: none;
+        }
+        div {
+            margin: auto;
+            padding: 20px 0px;
+        }
+        span {
+            border: 1px solid $secondarycolor;
+            font-size: $fontsize;
+            font-weight: $boldfontweight;
+            padding: 8px 30px;
+            border-radius: 20px;
+        }
+        b {
+            color: $secondarycolor;
+            padding: 3px;
+        }
+        button {
+            @extend .button-basic;
+            font-size: $fontsize;
+            padding: 10px 20px;
+            margin-left: 10px;
+        }
+     }
+     .pledge.active{
+        display: flex;
+     }
+    }
+    .modal-contents:hover {
+        border: 1px solid $buttoncolor;
+        cursor: pointer
+    } 
+}
+}
+
+.successmodal {
+    top: 40%;
+    @extend .modal;
+    display:none;
+    padding: 10px;
+
+    img {
+        top: 10%;
+        left: 40%;
+        position: absolute;
+    }
+    h4 {
+        @extend .h4;
+        margin-top: 100px;
+        text-align: center;
+    }
+    p {
+        @extend .paragraph;
+        text-align: center;
+        padding: 10px 20px;
+    }
+    button {
+     @extend .button-basic;
+     margin: 10px 100px;
+     font-size: $fontsize;
+     padding: 10px 20px;
+    }
+}
+
+
+.attribution { font-size: 11px; text-align: center;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+
+
+
+    /* ----------------------------------------------
+ * Generated by Animista on 2023-4-8 1:21:10
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-1000px);
+              transform: translateY(-1000px);
+      opacity: 0;
+  }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+}
+@keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-1000px);
+              transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header {
+        background-image: url(../images/image-hero-desktop.jpg);
+        height: 55vh;
+
+        nav{
+           li{
+            a {
+                color: $backgroundcolor;
+            }
+           }
+           li:nth-child(2){
+                border: none; 
+            }
+        .items {
+            display: flex;
+            justify-content: end; 
+            flex-direction:row ;
+            position: relative;
+            width: 40%;
+            left: 0;
+            top: 0;
+            background-color: transparent;
+            margin-right: 130px;
+        }
+      
+       #openmenu {
+            display: none;
+       }
+       .logo  {
+        padding: 15px 90px;
+      }  
+        }
+    }
+    main{
+        width: 50%;
+        margin: auto;
+        .bookmark {
+            display:flex;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            img {
+                width: 40px;
+                height: 40px;
+            }
+            a{
+                display:block;
+                padding: 4px 8px;
+                text-align: center;
+                margin-top: 5px;
+                font-weight: 700;
+            }
+            a:hover{
+                cursor: pointer;
+            }
+            #bookmark {
+                border: 1px solid $bordercolor;
+                border-radius: 20px;
+                display: flex
+            }
+        }
+
+        button {
+            @extend .button-basic;
+            border-radius: 25px;
+            padding: 10px 15px; 
+            margin-right: 280px;
+        }
+        .secondcontainersub-contents {
+
+            border: none;
+            display: flex;
+            margin-top: 0px;
+            padding: 30px;
+            margin:0 100px;
+            span {
+                margin-right: 20px;
+                padding: 0px;
+                margin: 0;
+                h1 {
+                    font-weight: $boldfontweight;
+                    padding: 0px;
+                    margin: 0;
+                }
+                p {
+                    padding: 0px;
+                    margin: 0;
+                }
+            }
+          
+            
+            hr {
+                width: 1px;
+                margin:10px auto;
+               
+            }
+        }
+
+        .thirdContainer-contents {
+            p{
+                margin-left: 20px;
+                margin-right: 70px;
+                font-size: 16px;
+            }
+          
+        .sub-contents {
+           .pledgeitems {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+          
+            h6 {
+                font-size: 16px;
+                padding: 8px;
+            }
+            button {
+            margin-right: 10px;
+            }
+           }
+           span {
+            padding: 10px 15px;
+           }
+           p:not(:first-child) {
+            line-height: 25px;
+            font-size: 16px;
+            margin: 0px 10px;
+            padding-right: 90px;
+         } 
+        }
+    }      
+}
+section {
+.selection-modal {
+    top: 80%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+
+    .modal-contents {
+        @extend .sub-contents;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin-bottom: 20px;
+    .modal-check {
+        flex-direction: row;
+        h6 {
+            @extend .h6;
+            padding-top:15px ;
+            padding-left: 60px;
+            padding-bottom: 10px;
+        }
+
+        span {
+            padding-left: 10px;
+            padding-top: 15px;
+          }
+}
+     p {
+            font-size: 16px;
+            margin-left:40px ;
+           margin-right: 20px;
+           padding-right: 20px;
+          }
+          .pledge {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top:20px;
+            h4 {
+                @extend .paragraph;
+                padding-top: 25px;
+                padding-left: 10px;
+            }
+            div {
+                margin:10px;
+            }
+            span {
+                border: 1px solid $secondarycolor;
+                font-size: $fontsize;
+                font-weight: $boldfontweight;
+                padding: 8px 30px;
+                border-radius: 20px;
+            }
+            b {
+                color: $secondarycolor;
+                padding: 3px;
+            }
+            button {
+                @extend .button-basic;
+                font-size: $fontsize;
+                padding: 10px 20px;
+                margin-left: 10px;
+            }
+         }
+}
+}
+}
+.successmodal {
+    top: 85%;
+    @extend .modal;
+    display:none;
+    padding: 10px;
+    width: 30%;
+    img {
+        top: 10%;
+        left: 40%;
+        position: absolute;
+    }
+    h4 {
+        @extend .h4;
+        margin-top: 100px;
+        text-align: center;
+    }
+    button {
+     @extend .button-basic;
+     margin: 10px 170px;
+     font-size: $fontsize;
+     padding: 10px 20px;
+    }
+}
+}

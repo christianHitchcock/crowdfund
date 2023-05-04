@@ -1,0 +1,54 @@
+
+.wrapper {
+    background-color: $backgroundcolor;
+    border-radius: 10px;
+}
+.paragraph {
+    font-size: $fontsize;
+    color: $secondarycolor;
+    font-weight: 500;
+    line-height: 22px;
+}
+.h6 {
+    padding-top: 10px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.h6:hover{
+    color: $buttoncolor;
+}
+.span {
+    color: $buttoncolor;
+    font-size: 10px;
+    font-weight: $boldfontweight;
+    padding-left: 20px;
+}
+.number {
+    font-size: 25px;
+    color: $primarycolor;
+    padding: 0;
+    font-weight: $boldfontweight;
+    padding-bottom: 10px
+}
+
+.sub-contents {
+    margin: 20px 25px;
+    border: 1px solid $bordercolor;
+    border-radius: 10px;
+}
+
+.h4 {
+    padding: 17px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: $boldfontweight;
+}
+.modal {
+    position: absolute;
+    left: 50%;
+    width: 85%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    background-color: $backgroundcolor;
+    border-radius: 10px;
+}

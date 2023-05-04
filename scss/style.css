@@ -1,0 +1,655 @@
+.button-basic, .successmodal button, section .selection-modal .modal-contents .pledge button, main .thirdContainer-contents .sub-contents button, main .thirdContainer-contents section .selection-modal .modal-contents button, section .selection-modal main .thirdContainer-contents .modal-contents button, main button {
+  font-size: 16px;
+  color: hsl(0, 0%, 96%);
+  background: hsl(176, 50%, 47%);
+  border: none;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "Commissioner", sans-serif;
+}
+
+.button-basic:hover, .successmodal button:hover, section .selection-modal .modal-contents .pledge button:hover, main .thirdContainer-contents .sub-contents button:hover, main .thirdContainer-contents section .selection-modal .modal-contents button:hover, section .selection-modal main .thirdContainer-contents .modal-contents button:hover, main button:hover {
+  color: hsl(0, 0%, 96%);
+  background: hsl(176, 72%, 28%);
+}
+
+.wrapper {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+}
+
+.paragraph, .successmodal p, section .selection-modal .modal-contents .pledge h4, section .selection-modal .modal-contents .modal-check p, section .selection-modal p, main .thirdContainer-contents p, main p {
+  font-size: 14px;
+  color: hsl(0, 0%, 48%);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.h6, section .selection-modal .modal-contents .modal-check h6, main .thirdContainer-contents .sub-contents h6, main .thirdContainer-contents section .selection-modal .modal-contents h6, section .selection-modal main .thirdContainer-contents .modal-contents h6 {
+  padding-top: 10px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.h6:hover, section .selection-modal .modal-contents .modal-check h6:hover, main .thirdContainer-contents .sub-contents h6:hover, main .thirdContainer-contents section .selection-modal .modal-contents h6:hover, section .selection-modal main .thirdContainer-contents .modal-contents h6:hover {
+  color: hsl(176, 50%, 47%);
+}
+
+.span, section .selection-modal .modal-contents .span, main .thirdContainer-contents .sub-contents span, main .thirdContainer-contents section .selection-modal .modal-contents span, section .selection-modal main .thirdContainer-contents .modal-contents span {
+  color: hsl(176, 50%, 47%);
+  font-size: 10px;
+  font-weight: 700;
+  padding-left: 20px;
+}
+
+.number, main .thirdContainer-contents .sub-contents .number, main .thirdContainer-contents section .selection-modal .modal-contents .number, section .selection-modal main .thirdContainer-contents .modal-contents .number {
+  font-size: 25px;
+  color: hsl(0, 0%, 0%);
+  padding: 0;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.sub-contents, section .selection-modal .modal-contents, main .thirdContainer-contents .sub-contents {
+  margin: 20px 25px;
+  border: 1px solid hsl(0, 3%, 88%);
+  border-radius: 10px;
+}
+
+.h4, .successmodal h4, section .selection-modal .modal-head h4, main .thirdContainer-contents h4 {
+  padding: 17px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.modal, .successmodal, section .selection-modal {
+  position: absolute;
+  left: 50%;
+  width: 85%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  font-family: "Commissioner", sans-serif;
+  background: hsl(0, 0%, 96%);
+  height: 90vh;
+}
+
+header {
+  background-image: url(../images/image-hero-mobile.jpg);
+  height: 45vh;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header nav {
+  background: transparent;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  animation: slide-in-top 0.7s both;
+}
+header nav li {
+  padding: 15px 0;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+header nav li a {
+  color: hsl(0, 0%, 0%);
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 10px;
+}
+header nav li a:hover {
+  text-decoration: underline;
+}
+header nav li:nth-child(2) {
+  border: 1px solid hsl(0, 3%, 88%);
+}
+header nav .items {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  width: 80%;
+  top: 90px;
+  padding: 10px 0;
+  text-align: left;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  animation: slide-in-top 0.7s both;
+}
+header nav .logo {
+  flex: 1;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  padding: 15px;
+}
+header nav .menu-icons {
+  padding: 5px 15px;
+}
+header nav #closemenu {
+  display: none;
+}
+header nav .responsive {
+  display: flex;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+}
+main .container-contents {
+  text-align: center;
+  margin-top: -60px;
+  margin-bottom: 20px;
+  background-color: hsl(0, 0%, 96%);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding-bottom: 5px;
+}
+main #logo {
+  margin-top: -20px;
+}
+main h3 {
+  padding: 15px 25px;
+  font-size: 20px;
+  font-weight: 700;
+}
+main p {
+  padding: 15px;
+}
+main .bookmark {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+main .bookmark img {
+  width: 40px;
+  height: 40px;
+}
+main .bookmark a {
+  display: none;
+}
+main button {
+  border-radius: 25px;
+  padding: 10px 35px;
+  margin: 0 5px;
+}
+main .secondcontainer-contents {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: hsl(0, 0%, 96%);
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+main .secondcontainer-contents h1 {
+  font-weight: 700;
+  padding: 10px;
+}
+main .secondcontainer-contents hr {
+  width: 80px;
+  margin: 10px auto;
+}
+main .secondcontainer-contents progress {
+  border-radius: 7px;
+  width: 80%;
+  height: 12px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+main .secondcontainer-contents progress::-webkit-progress-bar {
+  background-color: hsl(0, 3%, 88%);
+  border-radius: 7px;
+}
+main .secondcontainer-contents progress::-webkit-progress-value {
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 7px;
+}
+main .thirdContainer-contents {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  background-color: hsl(0, 0%, 96%);
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+main .thirdContainer-contents h4 {
+  font-size: 16px;
+  margin-left: 15px;
+}
+main .thirdContainer-contents p {
+  padding-top: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-right: 0px;
+}
+main .thirdContainer-contents .sub-contents button, main .thirdContainer-contents section .selection-modal .modal-contents button, section .selection-modal main .thirdContainer-contents .modal-contents button {
+  padding: 10px 20px;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+main .thirdContainer-contents #lastcontent {
+  opacity: 0.5;
+}
+main .thirdContainer-contents #outofstock {
+  background-color: hsl(0, 0%, 48%);
+}
+
+section {
+  display: none;
+}
+section .selection-modal {
+  top: 110%;
+}
+section .selection-modal .modal-head {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+section .selection-modal .modal-head h4 {
+  margin-right: 0px;
+  padding-top: 40px;
+}
+section .selection-modal .modal-head img {
+  height: 15px;
+  width: 15px;
+  margin-top: 20px;
+  margin-left: 110px;
+}
+section .selection-modal .modal-head .fa-solid {
+  color: hsl(0, 0%, 48%);
+  font-size: 20px;
+  padding: 20px;
+  cursor: pointer;
+}
+section .selection-modal .modal-head .fa-solid:hover {
+  color: hsl(0, 0%, 0%);
+}
+section .selection-modal p {
+  padding: 10px 20px;
+}
+section .selection-modal #lastsubcontent {
+  opacity: 0.5;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+section .selection-modal .modal-contents {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+section .selection-modal .modal-contents .selected {
+  border: 1px solid hsl(176, 50%, 47%);
+}
+section .selection-modal .modal-contents .modal-check {
+  display: flex;
+  flex-direction: column;
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+}
+section .selection-modal .modal-contents .modal-check h6 {
+  padding-top: 15px;
+  padding-left: 40px;
+  padding-bottom: 10px;
+}
+section .selection-modal .modal-contents .modal-check .container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+section .selection-modal .modal-contents .modal-check .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+section .selection-modal .modal-contents .modal-check .checkmark {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 20px;
+  width: 20px;
+  background-color: hsl(0, 0%, 96%);
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 48%);
+}
+section .selection-modal .modal-contents .modal-check .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+section .selection-modal .modal-contents .modal-check .container input:checked ~ .checkmark:after {
+  display: block;
+}
+section .selection-modal .modal-contents .modal-check .container .checkmark:after {
+  top: 5px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: hsl(176, 50%, 47%);
+}
+section .selection-modal .modal-contents .span, section .selection-modal .modal-contents main .thirdContainer-contents .sub-contents span, main .thirdContainer-contents section .selection-modal .modal-contents span, section .selection-modal main .thirdContainer-contents .modal-contents span {
+  padding-left: 40px;
+}
+section .selection-modal .modal-contents .pledge {
+  display: none;
+  flex-direction: column;
+  margin-top: 20px;
+}
+section .selection-modal .modal-contents .pledge h4 {
+  text-align: center;
+  border: none;
+}
+section .selection-modal .modal-contents .pledge div {
+  margin: auto;
+  padding: 20px 0px;
+}
+section .selection-modal .modal-contents .pledge span {
+  border: 1px solid hsl(0, 0%, 48%);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 30px;
+  border-radius: 20px;
+}
+section .selection-modal .modal-contents .pledge b {
+  color: hsl(0, 0%, 48%);
+  padding: 3px;
+}
+section .selection-modal .modal-contents .pledge button {
+  font-size: 14px;
+  padding: 10px 20px;
+  margin-left: 10px;
+}
+section .selection-modal .modal-contents .pledge.active {
+  display: flex;
+}
+section .selection-modal .modal-contents:hover {
+  border: 1px solid hsl(176, 50%, 47%);
+  cursor: pointer;
+}
+
+.successmodal {
+  top: 40%;
+  display: none;
+  padding: 10px;
+}
+.successmodal img {
+  top: 10%;
+  left: 40%;
+  position: absolute;
+}
+.successmodal h4 {
+  margin-top: 100px;
+  text-align: center;
+}
+.successmodal p {
+  text-align: center;
+  padding: 10px 20px;
+}
+.successmodal button {
+  margin: 10px 100px;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ----------------------------------------------
+* Generated by Animista on 2023-4-8 1:21:10
+* Licensed under FreeBSD License.
+* See http://animista.net/license for more info. 
+* w: http://animista.net, t: @cssanimista
+* ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation slide-in-top
+ * ----------------------------------------
+ */
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  header {
+    background-image: url(../images/image-hero-desktop.jpg);
+    height: 55vh;
+  }
+  header nav li a {
+    color: hsl(0, 0%, 100%);
+  }
+  header nav li:nth-child(2) {
+    border: none;
+  }
+  header nav .items {
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    position: relative;
+    width: 40%;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    margin-right: 130px;
+  }
+  header nav #openmenu {
+    display: none;
+  }
+  header nav .logo {
+    padding: 15px 90px;
+  }
+  main {
+    width: 50%;
+    margin: auto;
+  }
+  main .bookmark {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  main .bookmark img {
+    width: 40px;
+    height: 40px;
+  }
+  main .bookmark a {
+    display: block;
+    padding: 4px 8px;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: 700;
+  }
+  main .bookmark a:hover {
+    cursor: pointer;
+  }
+  main .bookmark #bookmark {
+    border: 1px solid hsl(0, 3%, 88%);
+    border-radius: 20px;
+    display: flex;
+  }
+  main button {
+    border-radius: 25px;
+    padding: 10px 15px;
+    margin-right: 280px;
+  }
+  main .secondcontainersub-contents {
+    border: none;
+    display: flex;
+    margin-top: 0px;
+    padding: 30px;
+    margin: 0 100px;
+  }
+  main .secondcontainersub-contents span {
+    margin-right: 20px;
+    padding: 0px;
+    margin: 0;
+  }
+  main .secondcontainersub-contents span h1 {
+    font-weight: 700;
+    padding: 0px;
+    margin: 0;
+  }
+  main .secondcontainersub-contents span p {
+    padding: 0px;
+    margin: 0;
+  }
+  main .secondcontainersub-contents hr {
+    width: 1px;
+    margin: 10px auto;
+  }
+  main .thirdContainer-contents p {
+    margin-left: 20px;
+    margin-right: 70px;
+    font-size: 16px;
+  }
+  main .thirdContainer-contents .sub-contents .pledgeitems, main .thirdContainer-contents section .selection-modal .modal-contents .pledgeitems, section .selection-modal main .thirdContainer-contents .modal-contents .pledgeitems {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  main .thirdContainer-contents .sub-contents .pledgeitems h6, main .thirdContainer-contents section .selection-modal .modal-contents .pledgeitems h6, section .selection-modal main .thirdContainer-contents .modal-contents .pledgeitems h6 {
+    font-size: 16px;
+    padding: 8px;
+  }
+  main .thirdContainer-contents .sub-contents .pledgeitems button, main .thirdContainer-contents section .selection-modal .modal-contents .pledgeitems button, section .selection-modal main .thirdContainer-contents .modal-contents .pledgeitems button {
+    margin-right: 10px;
+  }
+  main .thirdContainer-contents .sub-contents span, main .thirdContainer-contents section .selection-modal .modal-contents span, section .selection-modal main .thirdContainer-contents .modal-contents span {
+    padding: 10px 15px;
+  }
+  main .thirdContainer-contents .sub-contents p:not(:first-child), main .thirdContainer-contents section .selection-modal .modal-contents p:not(:first-child), section .selection-modal main .thirdContainer-contents .modal-contents p:not(:first-child) {
+    line-height: 25px;
+    font-size: 16px;
+    margin: 0px 10px;
+    padding-right: 90px;
+  }
+  section .selection-modal {
+    top: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+  }
+  section .selection-modal .modal-contents {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  section .selection-modal .modal-contents .modal-check {
+    flex-direction: row;
+  }
+  section .selection-modal .modal-contents .modal-check h6 {
+    padding-top: 15px;
+    padding-left: 60px;
+    padding-bottom: 10px;
+  }
+  section .selection-modal .modal-contents .modal-check span {
+    padding-left: 10px;
+    padding-top: 15px;
+  }
+  section .selection-modal .modal-contents p {
+    font-size: 16px;
+    margin-left: 40px;
+    margin-right: 20px;
+    padding-right: 20px;
+  }
+  section .selection-modal .modal-contents .pledge {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  section .selection-modal .modal-contents .pledge h4 {
+    padding-top: 25px;
+    padding-left: 10px;
+  }
+  section .selection-modal .modal-contents .pledge div {
+    margin: 10px;
+  }
+  section .selection-modal .modal-contents .pledge span {
+    border: 1px solid hsl(0, 0%, 48%);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 30px;
+    border-radius: 20px;
+  }
+  section .selection-modal .modal-contents .pledge b {
+    color: hsl(0, 0%, 48%);
+    padding: 3px;
+  }
+  section .selection-modal .modal-contents .pledge button {
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-left: 10px;
+  }
+  .successmodal {
+    top: 85%;
+    display: none;
+    padding: 10px;
+    width: 30%;
+  }
+  .successmodal img {
+    top: 10%;
+    left: 40%;
+    position: absolute;
+  }
+  .successmodal h4 {
+    margin-top: 100px;
+    text-align: center;
+  }
+  .successmodal button {
+    margin: 10px 170px;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
